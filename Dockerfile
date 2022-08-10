@@ -18,7 +18,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
-RUN useradd -m -d /app game
+RUN useradd -u 1001 -m -d /app game
 
 RUN mkdir -p /steamcmd && chown -R game:game /steamcmd
 
