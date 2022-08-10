@@ -20,13 +20,13 @@ RUN chmod +x /entrypoint.sh
 
 RUN useradd -m -d /app game
 
+RUN mkdir -p /steamcmd && chown -R game:game /steamcmd
+
 USER game
 
 ENV HOME /app
 
 WORKDIR /app
-
-RUN mkdir -p /steamcmd
 
 RUN curl -sSL -o /tmp/steamcmd.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 
