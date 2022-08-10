@@ -33,11 +33,13 @@ cd /steamcmd
 
 ## set up 32 bit libraries
 mkdir -p /app/.steam/sdk32
-cp -v linux32/steamclient.so ../.steam/sdk32/steamclient.so
+cp -v linux32/steamclient.so /app/.steam/sdk32/steamclient.so
 
 ## set up 64 bit libraries
 mkdir -p /app/.steam/sdk64
-cp -v linux64/steamclient.so ../.steam/sdk64/steamclient.so
+cp -v linux64/steamclient.so /app/.steam/sdk64/steamclient.so
+
+cd /app
 
 ## run the server
 ./srcds_run -game ${SRCDS_GAMETYPE} -console -port ${SRCDS_GAME_PORT} -maxplayers ${SRCDS_MAXPLAYERS} -tickrate ${SRCDS_TICKRATE} -strictportbind -norestart +ip ${SRCDS_IP} +clientport ${SRCDS_CLIENT_PORT} +tv_port ${SRCDS_SOURCE_TV_PORT} +map ${SRCDS_MAP} +sv_setsteamaccount ${SRCDS_GSLT} ${SRCDS_ADDITIONAL_ARGS}
