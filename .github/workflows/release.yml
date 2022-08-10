@@ -29,4 +29,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: maxime1907/srcds:${{ env.RELEASE_VERSION }}
+          tags: maxime1907/srcds:latest, maxime1907/srcds:${{ env.RELEASE_VERSION }}
