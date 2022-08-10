@@ -1,9 +1,15 @@
 name: Build docker image
 
 on:
+  push:
+    branches:
+      - 'main'
   pull_request:
     branches:
-      - "*"
+      - '*'
+    paths:
+      - Dockerfile
+      - entrypoint.sh
 
 jobs:
   docker:
