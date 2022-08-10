@@ -11,7 +11,7 @@ RUN dpkg --add-architecture i386 \
         lib32z1-dev \
         libc6-dev-i386 \
         linux-libc-dev:i386 \
-        libncurses5 \
+        libncurses5:i386 \
         curl \
         ca-certificates
 
