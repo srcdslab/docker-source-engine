@@ -26,7 +26,7 @@ else
     echo -e "user set to ${STEAM_USER}"
 fi
 
-cd /app/steamcmd
+cd /steamcmd
 
 ## install game using steamcmd
 ./steamcmd.sh +login ${STEAM_USER} ${STEAM_PASS} ${STEAM_AUTH} +force_install_dir /app +app_update ${SRCDS_APPID} validate +quit ## other flags may be needed depending on install. looking at you cs 1.6

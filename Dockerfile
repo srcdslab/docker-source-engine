@@ -26,11 +26,11 @@ ENV HOME /app
 
 WORKDIR /app
 
-RUN mkdir -p /app/steamcmd
+RUN mkdir -p /steamcmd
 
 RUN curl -sSL -o /tmp/steamcmd.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 
-RUN tar -xzvf /tmp/steamcmd.tar.gz -C /app/steamcmd
+RUN tar -xzvf /tmp/steamcmd.tar.gz -C /steamcmd
 
 RUN rm -rf /tmp/*
 
