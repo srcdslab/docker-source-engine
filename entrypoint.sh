@@ -29,7 +29,7 @@ fi
 cd /steamcmd
 
 ## install game using steamcmd
-./steamcmd.sh +login ${STEAM_USER} ${STEAM_PASS} ${STEAM_AUTH} +force_install_dir /app +app_update ${SRCDS_APPID} validate +quit ## other flags may be needed depending on install. looking at you cs 1.6
+./steamcmd.sh +force_install_dir /app +login ${STEAM_USER} ${STEAM_PASS} ${STEAM_AUTH} +app_update ${SRCDS_APPID} ${STEAM_ADDITIONAL_ARGS} +quit ## other flags may be needed depending on install. looking at you cs 1.6
 
 ## set up 32 bit libraries
 mkdir -p /app/.steam/sdk32
